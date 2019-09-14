@@ -14,10 +14,10 @@ void setup()
 void loop()
 {
   digitalWrite(trigPin, LOW);
-  delayMicroseconds(10);
+  delayMicroseconds(500);
 
   digitalWrite(trigPin, HIGH);
-  delayMicroseconds(10);
+  delayMicroseconds(500);
 
   digitalWrite(trigPin, LOW);
 
