@@ -22,6 +22,6 @@ while (1 == 1):
                 #print("NUMBER OF CARS IS NOW: ", num_cars)
                 print("THERE ARE : ", total_spaces - num_cars, " SPACES LEFT")
                 car_has_entered = False
-    
+
         #print(mydata)
         #print(currDistance)
