@@ -1,0 +1,4 @@
+<script>
+navigator.geolocation.getCurrentPosition(function)
+
+</script>
