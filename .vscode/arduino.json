@@ -1,4 +1,5 @@
 {
     "board": "Intel:arc32:arduino_101",
-    "programmer": "AVRISP mkII"
+    "programmer": "AVRISP mkII",
+    "port": "/dev/cu.usbmodem14201"
 }
