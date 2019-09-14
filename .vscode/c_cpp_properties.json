@@ -4,10 +4,13 @@
             "name": "Mac",
             "includePath": [
                 "/Users/Milind/Library/Arduino15/packages/Intel/tools/**",
-                "/Users/Milind/Library/Arduino15/packages/Intel/hardware/arc32/2.0.4/**"
+                "/Users/Milind/Library/Arduino15/packages/Intel/hardware/arc32/2.0.4/**",
+                "C:\\Users\\Nabil Mohamed\\AppData\\Local\\Arduino15\\packages\\Intel\\hardware\\arc32\\2.0.4\\**",
+                "C:\\Users\\Nabil Mohamed\\AppData\\Local\\Arduino15\\packages\\Intel\\tools\\**"
             ],
             "forcedInclude": [
-                "/Users/Milind/Library/Arduino15/packages/Intel/hardware/arc32/2.0.4/cores/arduino/Arduino.h"
+                "/Users/Milind/Library/Arduino15/packages/Intel/hardware/arc32/2.0.4/cores/arduino/Arduino.h",
+                "C:\\Users\\Nabil Mohamed\\AppData\\Local\\Arduino15\\packages\\Intel\\hardware\\arc32\\2.0.4\\cores\\arduino\\Arduino.h"
             ],
             "macFrameworkPath": [
                 "/System/Library/Frameworks",

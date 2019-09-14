@@ -26,7 +26,7 @@ void loop()
   //This gives us distance in cm
   distance = duration * 0.034 / 2;
 
-  Serial.println("Distance: ");
+  //Serial.println("Distance: ");
   Serial.println(distance);
 
   //Millisecond
