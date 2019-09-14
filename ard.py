@@ -6,3 +6,4 @@ while (1 == 1):
     if (arduinoSerialData.inWaiting() > 0):
         mydata = arduinoSerialData.readline()
         print(mydata)
+# while (float(mydata) < 2)
