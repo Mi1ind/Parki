@@ -34,8 +34,8 @@ class ParkingLot:
         
                     
 bay_street = ParkingLot('COM5', 9600, 20, 'bay street') #20 parking spaces
-osgoode_lane = ParkingLot('COM6', 9600, 50, 'osgoode lane') #50 parking spaces
+#osgoode_lane = ParkingLot('COM6', 9600, 50, 'osgoode lane') #50 parking spaces
 
 while(1 == 1):
     bay_street.update()
-    osgoode_lane.update()
+    #osgoode_lane.update()
