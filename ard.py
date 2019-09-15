@@ -30,6 +30,8 @@ class ParkingLot:
                     self.num_cars += 1
                     print(self.name, ": THERE ARE: ", max(0,self.num_parking_lots - self.num_cars), " SPACES LEFT")
                     self.has_entered = False
+                    with  open ('myTestFile','w') as
+    myFile: myFile.write(num_parking_lots)
      
         
                     
@@ -39,3 +41,6 @@ bay_street = ParkingLot('COM5', 9600, 20, 'bay street') #20 parking spaces
 while(1 == 1):
     bay_street.update()
     #osgoode_lane.update()
+
+    
+
