@@ -52,13 +52,24 @@ export default class StartScreen extends Component {
     function getLocation() {
       var xhttp = new XMLHttpRequest();
       xhttp.onreadystatechange = function() {
-           if (this.readyState == 4 && this.status == 200) {
-               alert(this.responseText);
-           }
+          if (this.readyState == 4 && this.status == 200) {
+            // Typical action to be performed when the document is ready:
+            document.getElementById("demo").innerHTML = xhttp.responseText;
+            console.log(this.response)
+          }
       };
-      xhttp.open("POST", "https://www.googleapis.com/geolocation/v1/geolocate?key=AIzaSyBYLKtlFWcErQTNylqGs4xrFYkW4ksn98Q", true);
+      xhttp.open("POST", "https://www.googleapis.com/geolocation/v1/geolocate?key=AIzaSyBYLKtlFWcErQTNylqGs4xrFYkW4ksn98Q");
       xhttp.setRequestHeader("Content-type", "application/json");
-      xhttp.send("Your JSON Data Here");
+      xhttp.send();
+      // var xhttp = new XMLHttpRequest();
+      // xhttp.onreadystatechange = function() {
+      //      if (this.readyState == 4 && this.status == 200) {
+      //          alert(this.responseText);
+      //      }
+      // };
+      // xhttp.open("POST", "https://www.googleapis.com/geolocation/v1/geolocate?key=AIzaSyBYLKtlFWcErQTNylqGs4xrFYkW4ksn98Q", true);
+      // xhttp.setRequestHeader("Content-type", "application/json");
+      // xhttp.send("Your JSON Data Here");
   }
   window.onload = getLocation();
 
