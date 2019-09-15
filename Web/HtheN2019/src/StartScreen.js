@@ -49,7 +49,7 @@ export default class StartScreen extends Component {
     items_list = items_list.concat(this.props.appActions.getDataSheet('sheet1').items);
     
 
-    frunction getLocation() {
+    function getLocation() {
       var xhttp = new XMLHttpRequest();
       xhttp.onreadystatechange = function() {
            if (this.readyState == 4 && this.status == 200) {
@@ -60,7 +60,7 @@ export default class StartScreen extends Component {
       xhttp.setRequestHeader("Content-type", "application/json");
       xhttp.send("Your JSON Data Here");
   }
-  window.onload = getLocation;
+  window.onload = getLocation();
 
 
 
