@@ -56,7 +56,7 @@ export default class StartScreen extends Component {
                alert(this.responseText);
            }
       };
-      xhttp.open("POST", "https://www.googleapis.com/geolocation/v1/geolocate?key=AIzaSyBYLKtlFWcErQTNylqGs4xrFYkW4ksn98Q Here", true);
+      xhttp.open("POST", "https://www.googleapis.com/geolocation/v1/geolocate?key=AIzaSyBYLKtlFWcErQTNylqGs4xrFYkW4ksn98Q", true);
       xhttp.setRequestHeader("Content-type", "application/json");
       xhttp.send("Your JSON Data Here");
   }
