@@ -1,5 +1,6 @@
 # HacktheNorth2019
 Our Hack the North 2019 Project
+![](car_detection_system.jpg)
 
 ## Inspiration
 Finding parking spots in Toronto and in other urban centres eats up a lot of time, and is not always feasible. Framing our hack around addressing this ubiquitous problem would also allow us to explore and develop our expertise in using various technologies - from hardware hacking with arduino, to developing a react frontend.
