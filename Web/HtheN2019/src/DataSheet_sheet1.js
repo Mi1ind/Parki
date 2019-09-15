@@ -9,10 +9,11 @@ export default class DataSheet_sheet1 extends DataSheetBase {
 
   //window.onload = function {
 
-
+    
   
+  /*
    const userAction = async () => {
-    const response = await fetch('http://example."https://www.googleapis.com/geolocation/v1/geolocate?key=AIzaSyBYLKtlFWcErQTNylqGs4xrFYkW4ksn98Q"
+    const response = await fetch('http://example."https://www.googleapis.com/geolocation/v1/geolocate?key=AIzaSyBYLKtlFWcErQTNylqGs4xrFYkW4ksn98Q'
    , {
       method: 'POST',
       body: myBody, // string or object
@@ -34,19 +35,9 @@ export default class DataSheet_sheet1 extends DataSheetBase {
 
 
 
-   
- if(navigator.geolocation){
-  navigator.geolocation.getCurrentPosition(showPosition);
-  else
-  console.log("geolocation is not supported");
-}
+   */
 
-function showposition(position) 
-{
-  var lat = position.coords.latitude;
-  var long = position.coords.longitude;
-}
-*/
+ 
   makeDefaultItems() {
     // eslint-disable-next-line no-unused-vars
     let key = 1;
