@@ -13,22 +13,22 @@ export default class StartScreen extends Component {
   }
 
   render() {
-    function getLocation() {
-      var xhttp = new XMLHttpRequest();
-      xhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-          alert(this.responseText);
-        }
-      };
-      xhttp.open(
-        "POST",
-        "https://www.googleapis.com/geolocation/v1/geolocate?key=AIzaSyBYLKtlFWcErQTNylqGs4xrFYkW4ksn98Q",
-        true
-      );
-      xhttp.setRequestHeader("Content-type", "application/json");
-      xhttp.send("Your JSON Data Here");
-    }
-    window.onload = getLocation;
+    //   function getLocation() {
+    //     var xhttp = new XMLHttpRequest();
+    //     xhttp.onreadystatechange = function() {
+    //       if (this.readyState == 4 && this.status == 200) {
+    //         alert(this.responseText);
+    //       }
+    //     };
+    //     xhttp.open(
+    //       "POST",
+    //       "https://www.googleapis.com/geolocation/v1/geolocate?key=AIzaSyBYLKtlFWcErQTNylqGs4xrFYkW4ksn98Q",
+    //       true
+    //     );
+    //     xhttp.setRequestHeader("Content-type", "application/json");
+    //     xhttp.send("Your JSON Data Here");
+    //   }
+    //   window.onload = getLocation;
 
     let layoutFlowStyle = {};
     let baseStyle = {};
@@ -68,20 +68,49 @@ export default class StartScreen extends Component {
     items_list = items_list.concat(
       this.props.appActions.getDataSheet("sheet1").items
     );
+    items_list = items_list.concat(
+      this.props.appActions.getDataSheet("sheet1").items
+    );
 
-    /*   
-   if(navigator.geolocation){
-    navigator.geolocation.getCurrentPosition(showPosition);
-    else
-    console.log("geolocation is not supported");
-}
+    // function getLocation() {
+    //   var xhttp = new XMLHttpRequest();
+    //   xhttp.onreadystatechange = function() {
+    //     if (this.readyState == 4 && this.status == 200) {
+    //       // Typical action to be performed when the document is ready:
+    //       document.getElementById("demo").innerHTML = xhttp.responseText;
+    //       console.log(this.response);
+    //     }
+    //   };
+    //   xhttp.open(
+    //     "POST",
+    //     "https://www.googleapis.com/geolocation/v1/geolocate?key=AIzaSyBYLKtlFWcErQTNylqGs4xrFYkW4ksn98Q"
+    //   );
+    //   xhttp.setRequestHeader("Content-type", "application/json");
+    //   xhttp.send();
+    // var xhttp = new XMLHttpRequest();
+    // xhttp.onreadystatechange = function() {
+    //      if (this.readyState == 4 && this.status == 200) {
+    //          alert(this.responseText);
+    //      }
+    // };
+    // xhttp.open("POST", "https://www.googleapis.com/geolocation/v1/geolocate?key=AIzaSyBYLKtlFWcErQTNylqGs4xrFYkW4ksn98Q", true);
+    // xhttp.setRequestHeader("Content-type", "application/json");
+    // xhttp.send("Your JSON Data Here");
+    // }
+    // window.onload = getLocation();
 
-function showposition(position) 
-{
-    var lat = position.coords.latitude;
-    var long = position.coords.longitude;
-}
-*/
+    //  if(navigator.geolocation){
+    //   navigator.geolocation.getCurrentPosition(showPosition);
+    //   else
+    //   console.log("geolocation is not supported");
+    // }
+
+    // function showposition(position)
+    // {
+    //     var lat = position.coords.latitude;
+    //     var long = position.coords.longitude;
+    // }
+
     return (
       <div className="AppScreen StartScreen" style={baseStyle}>
         <div className="background">
