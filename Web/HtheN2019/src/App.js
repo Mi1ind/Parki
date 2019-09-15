@@ -2,9 +2,8 @@ import React, { Component } from 'react';
 import LocalizedStrings from 'react-localization';
 import './App.css';
 import StartScreen from './StartScreen.js';
+import DataSheet_sheet1 from './DataSheet_sheet1.js';
 import DataSheet_localizationSheet from './DataSheet_localizationSheet.js';
-import DataSheet_toDoItems from './DataSheet_toDoItems.js';
-import DataSheet_sheet2 from './DataSheet_sheet2.js';
 
 
 export default class App extends Component {
@@ -12,26 +11,23 @@ export default class App extends Component {
     super(props);
 
     this.dataSheets = {};
+    this.dataSheets['sheet1'] = new DataSheet_sheet1('sheet1', this.dataSheetDidUpdate);
     this.dataSheets['localizationSheet'] = new DataSheet_localizationSheet('localizationSheet', this.dataSheetDidUpdate);
-    this.dataSheets['toDoItems'] = new DataSheet_toDoItems('toDoItems', this.dataSheetDidUpdate);
-    this.dataSheets['sheet2'] = new DataSheet_sheet2('sheet2', this.dataSheetDidUpdate);
 
     this.dataSlots = {};
     this.dataSlots['ds_activeLang'] = "en";
-    this.dataSlots['ds_filter'] = "";
-    this.dataSlots['ds_todoItem'] = "";
 
     this.updateLocalizationFromDataSheet(this.dataSheets['localizationSheet']);
 
 
-    this.serviceOptions_sheet2 = {
+    this.serviceOptions_sheet1 = {
       dataSlots: this.dataSlots,
       servicePath: "6ax8zrqn-dbtest1",
       query: "",
     };
     setInterval(() => {  // Reload data regularly
-      this.serviceOptions_sheet2.servicePath = this.dataSheets['sheet2'].expandSlotTemplateString("6ax8zrqn-dbtest1", this.dataSlots);
-      this.loadData_gsheet1(this.dataSheets['sheet2'], this.serviceOptions_sheet2, false);
+      this.serviceOptions_sheet1.servicePath = this.dataSheets['sheet1'].expandSlotTemplateString("6ax8zrqn-dbtest1", this.dataSlots);
+      this.loadData_gsheet1(this.dataSheets['sheet1'], this.serviceOptions_sheet1, false);
     }, 10000);
     
 
@@ -60,8 +56,8 @@ export default class App extends Component {
     this.windowDidResize();
     window.addEventListener('resize', this.windowDidResize);
 
-    this.serviceOptions_sheet2.servicePath = this.dataSheets['sheet2'].expandSlotTemplateString("6ax8zrqn-dbtest1", this.dataSlots);
-    this.loadData_gsheet1(this.dataSheets['sheet2'], this.serviceOptions_sheet2, true);
+    this.serviceOptions_sheet1.servicePath = this.dataSheets['sheet1'].expandSlotTemplateString("6ax8zrqn-dbtest1", this.dataSlots);
+    this.loadData_gsheet1(this.dataSheets['sheet1'], this.serviceOptions_sheet1, true);
     
   }
 
@@ -162,11 +158,11 @@ export default class App extends Component {
 
     {
       let usedSlots = [];
-      let servicePath = this.dataSheets['sheet2'].expandSlotTemplateString("6ax8zrqn-dbtest1", this.dataSlots, usedSlots);
+      let servicePath = this.dataSheets['sheet1'].expandSlotTemplateString("6ax8zrqn-dbtest1", this.dataSlots, usedSlots);
       if (usedSlots.includes(slotId)) {
         // if data sheet's content depends on this slot, reload it now
-        this.serviceOptions_sheet2.servicePath = servicePath;
-        this.loadData_gsheet1(this.dataSheets['sheet2'], this.serviceOptions_sheet2, true);
+        this.serviceOptions_sheet1.servicePath = servicePath;
+        this.loadData_gsheet1(this.dataSheets['sheet1'], this.serviceOptions_sheet1, true);
       }
     }
     this.setState({});
@@ -270,8 +266,6 @@ export default class App extends Component {
           screenFormatId: this.state.screenFormatId
         },
         'ds_activeLang': this.dataSlots['ds_activeLang'],
-        'ds_filter': this.dataSlots['ds_filter'],
-        'ds_todoItem': this.dataSlots['ds_todoItem'],
       };
       switch (screenId) {
         default:
