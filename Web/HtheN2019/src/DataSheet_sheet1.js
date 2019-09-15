@@ -7,7 +7,7 @@ export default class DataSheet_sheet1 extends DataSheetBase {
     this.requestedKeyPath = "";  // this value can be specified in the React Studio data sheet UI
   }
 
-  window.onload = function {
+  //window.onload = function {
 
 
   
@@ -18,18 +18,23 @@ export default class DataSheet_sheet1 extends DataSheetBase {
       body: myBody, // string or object
       headers: {
         'Content-Type': 'application/json'
+   }
+  
+      
+
+      
       }
     });
     const myJson = await response.json(); //extract JSON from the http response
     // do something with myJson
   }
-}
 
 
 
 
 
- /*   
+
+   
  if(navigator.geolocation){
   navigator.geolocation.getCurrentPosition(showPosition);
   else
