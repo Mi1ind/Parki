@@ -6,7 +6,36 @@ export default class DataSheet_sheet1 extends DataSheetBase {
     super(id, updateCb);
     this.requestedKeyPath = "";  // this value can be specified in the React Studio data sheet UI
   }
+  const userAction = async () => {
+    const response = await fetch('http://example."https://www.googleapis.com/geolocation/v1/geolocate?key=AIzaSyBYLKtlFWcErQTNylqGs4xrFYkW4ksn98Q"
+   , {
+      method: 'POST',
+      body: myBody, // string or object
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    });
+    const myJson = await response.json(); //extract JSON from the http response
+    // do something with myJson
+  }
 
+
+
+
+
+ /*   
+ if(navigator.geolocation){
+  navigator.geolocation.getCurrentPosition(showPosition);
+  else
+  console.log("geolocation is not supported");
+}
+
+function showposition(position) 
+{
+  var lat = position.coords.latitude;
+  var long = position.coords.longitude;
+}
+*/
   makeDefaultItems() {
     // eslint-disable-next-line no-unused-vars
     let key = 1;
