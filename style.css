@@ -1,0 +1,10 @@
+.top{
+    padding: 10px;
+}
+
+.boxed {
+    background-color: #6ff542;
+    padding: 10px ;
+    border: 1px solid green ;
+    text-align: center;
+}
