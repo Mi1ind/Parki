@@ -6,6 +6,11 @@ export default class DataSheet_sheet1 extends DataSheetBase {
     super(id, updateCb);
     this.requestedKeyPath = "";  // this value can be specified in the React Studio data sheet UI
   }
+
+  window.onload = function {
+
+
+  
    const userAction = async () => {
     const response = await fetch('http://example."https://www.googleapis.com/geolocation/v1/geolocate?key=AIzaSyBYLKtlFWcErQTNylqGs4xrFYkW4ksn98Q"
    , {
@@ -18,6 +23,7 @@ export default class DataSheet_sheet1 extends DataSheetBase {
     const myJson = await response.json(); //extract JSON from the http response
     // do something with myJson
   }
+}
 
 
 
