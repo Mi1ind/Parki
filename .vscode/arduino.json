@@ -1,6 +1,0 @@
-{
-    "board": "Intel:arc32:arduino_101",
-    "programmer": "AVRISP mkII",
-    "port": "COM5",
-    "sketch": "sketch_sep14a\\sketch_sep14a.ino"
-}
