@@ -1,4 +1,4 @@
-# Hack the North 2019
+# Parki
 Our Hack the North 2019 Project:
 
 ![Screenshot](car_detection_system.jpg)
